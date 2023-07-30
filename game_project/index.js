@@ -1,7 +1,7 @@
 const cards =document.querySelectorAll(".card");
 var point = document.querySelector(".text");
 const cont = document.querySelector(".win");
-
+var count=0;
 var text = document.createTextNode("CAN YOU WIN");
 point.appendChild(text);
 cards.forEach( (card)=>{
@@ -29,6 +29,7 @@ function checkOut(){
     success();
   }
   else{
+    count++;
     failure();
   }
 }
@@ -47,6 +48,7 @@ function success(){
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
     reset();
+    count=0;
   },2000)
   
 }
