@@ -40,7 +40,7 @@ function success(){
   cont.classList.add("won");
 
   point.removeChild(text);
-  text = document.createTextNode("YOU WON");
+  text = document.createTextNode("Won!! Score is "+count);
   point.appendChild(text);
   firstCard.removeEventListener("click",flip);
   secondCard.removeEventListener("click",flip);
